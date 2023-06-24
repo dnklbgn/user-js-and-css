@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        amo messenger chats wallpaper
 // @namespace   https://github.com/dnklhtbgn/js-user-scripts
-// @version     0.2
+// @version     0.3
 // @description Добавляем возможность ставить обои для чатов в мессенджере amo
 // @match       *://web.amo.tm/*
 // @grant       GM_setValue
@@ -23,11 +23,18 @@ function GM_addStyle(css) {
 }
 
 function setWallpaper(wallpaper_path) {
+    // Какой-то загадочный прикол, не удается задать стили для нескольких селекторов в одном вызове GM_addStyle,
+    // поэтому для каждого из селекторов вызываем функцию по новой
     GM_addStyle(
         '#app > div:nth-child(3) ._scrollbar.baron__clipper {' +
         'background-image: url(' + wallpaper_path + ');' +
         'background-repeat: no-repeat;' +
         'background-size: cover;' +
+        '}'
+    );
+    GM_addStyle(
+        '#app > div:nth-child(3) > div:nth-child(4) ._scrollbar.baron__clipper div[role="button"] {' +
+        'background-color: rgb(255, 255, 255);' +
         '}'
     );
 }
