@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        amo messenger chats wallpaper
 // @namespace   https://github.com/dnklhtbgn/js-user-scripts
-// @version     0.4
+// @version     0.5
 // @description Добавляем возможность ставить обои для чатов в мессенджере amo
 // @author      dnklhtbgn
 // @downloadURL https://github.com/dnklhtbgn/js-user-scripts/raw/master/amo/chats_wallpaper.user.js
@@ -11,6 +11,8 @@
 // @grant       GM_getValue
 // ==/UserScript==
 
+// Какой-то прикол некоторых браузеров, не во всех из них подтягивается GM_addStyle из @grant,
+// поэтому делаем такой мув с определением собственного GM_addStyle
 function GM_addStyle(css) {
     const style = document.getElementById("GM_addStyleBy8626") || (function() {
         const style = document.createElement('style');
@@ -33,7 +35,6 @@ function setWallpaper(wallpaper_path) {
         'background-image: url(' + wallpaper_path + ');' +
         'background-repeat: no-repeat;' +
         'background-size: cover;' +
-        'background-attachment: local;' +
         '}'
     );
     GM_addStyle(
