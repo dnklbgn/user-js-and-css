@@ -1,8 +1,11 @@
 // ==UserScript==
 // @name        amo messenger chats wallpaper
 // @namespace   https://github.com/dnklhtbgn/js-user-scripts
-// @version     0.3
+// @version     0.4
 // @description Добавляем возможность ставить обои для чатов в мессенджере amo
+// @author      dnklhtbgn
+// @downloadURL https://github.com/dnklhtbgn/js-user-scripts/raw/master/amo/chats_wallpaper.user.js
+// @updateURL   https://github.com/dnklhtbgn/js-user-scripts/raw/master/amo/chats_wallpaper.user.js
 // @match       *://web.amo.tm/*
 // @grant       GM_setValue
 // @grant       GM_getValue
@@ -30,6 +33,7 @@ function setWallpaper(wallpaper_path) {
         'background-image: url(' + wallpaper_path + ');' +
         'background-repeat: no-repeat;' +
         'background-size: cover;' +
+        'background-attachment: local;' +
         '}'
     );
     GM_addStyle(
