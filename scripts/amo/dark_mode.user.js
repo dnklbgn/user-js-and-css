@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        amo messenger dark mode
 // @namespace   https://github.com/dnklhtbgn/js-user-scripts
-// @version     0.1
+// @version     0.2
 // @description Добавляем темную тему в мессенджер amo
 // @author      dnklhtbgn
 // @downloadURL https://github.com/dnklhtbgn/js-user-scripts/raw/master/scripts/amo/dark_mode.user.js
@@ -41,6 +41,19 @@ function GM_addStyle(css) {
   GM_addStyle('[class^="style_selected__"] { background: #163f5f !important; }');
   GM_addStyle('[class^="style_modal_drawer"] { background: #102535; }');
   GM_addStyle('#app > div:nth-child(3) ._scrollbar.baron__clipper { background: #0f2231; }');
+  GM_addStyle(
+    '#app > div:nth-child(3) ._scrollbar.baron__clipper:before {' +
+    'content: \'\';' +
+    'display: block;' +
+    'position: absolute;' +
+    'left: 0;' +
+    'top: 0;' +
+    'width: 100%;' +
+    'height: 100%;' +
+    'opacity: 0.05;' +
+    'background: url(https://raw.githubusercontent.com/dnklhtbgn/js-user-scripts/blob/master/images/amo/dark_mode_background_pattern.png), #0f2231;' +
+    '}'
+  );
   GM_addStyle('[class*="RegularMessage_is_outgoing__"] [class^="RegularMessage_message__"] { background: #264b79; }');
   GM_addStyle(
     '[class^="RegularMessage_message__"], [class^="ForwardMessage_container__"], [class^="ReferenceMessage_container__"], [class^="FeedTextarea_editable__"] {' +
