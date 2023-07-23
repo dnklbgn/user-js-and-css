@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        amo messenger dark mode
 // @namespace   https://github.com/dnklhtbgn/js-user-scripts
-// @version     0.2
+// @version     0.3
 // @description Добавляем темную тему в мессенджер amo
 // @author      dnklhtbgn
 // @downloadURL https://github.com/dnklhtbgn/user-js-and-css/raw/master/scripts/amo/dark_mode.user.js
@@ -79,7 +79,7 @@ function GM_addStyle(css) {
     '}'
   );
   GM_addStyle(
-    '[class^="TabCaption_name__"], [class*="MessageTitle_user__"], [class^="UserLink_user_link__"], [class^="ServiceMessage_container__"] {' +
+    '[class^="TabCaption_name__"], [class*="MessageTitle_user__"], [class^="ServiceMessage_container__"] [class^="UserLink_user_link__"], [class^="ServiceMessage_container__"] {' +
     'color: #8092ad;' +
     '}'
   );
