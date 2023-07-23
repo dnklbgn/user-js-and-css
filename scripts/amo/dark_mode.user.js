@@ -4,8 +4,8 @@
 // @version     0.2
 // @description Добавляем темную тему в мессенджер amo
 // @author      dnklhtbgn
-// @downloadURL https://github.com/dnklhtbgn/js-user-scripts/raw/master/scripts/amo/dark_mode.user.js
-// @updateURL   https://github.com/dnklhtbgn/js-user-scripts/raw/master/scripts/amo/dark_mode.user.js
+// @downloadURL https://github.com/dnklhtbgn/user-js-and-css/raw/master/scripts/amo/dark_mode.user.js
+// @updateURL   https://github.com/dnklhtbgn/user-js-and-css/raw/master/scripts/amo/dark_mode.user.js
 // @match       *://web.amo.tm/*
 // ==/UserScript==
 
@@ -51,7 +51,7 @@ function GM_addStyle(css) {
     'width: 100%;' +
     'height: 100%;' +
     'opacity: 0.05;' +
-    'background: url(https://raw.githubusercontent.com/dnklhtbgn/js-user-scripts/blob/master/images/amo/dark_mode_background_pattern.png), #0f2231;' +
+    'background: url(https://raw.githubusercontent.com/dnklhtbgn/user-js-and-css/master/images/amo/dark_mode_background_pattern.png), #0f2231;' +
     '}'
   );
   GM_addStyle('[class*="RegularMessage_is_outgoing__"] [class^="RegularMessage_message__"] { background: #264b79; }');

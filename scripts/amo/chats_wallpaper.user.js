@@ -4,8 +4,8 @@
 // @version     0.5
 // @description Добавляем возможность ставить обои для чатов в мессенджере amo
 // @author      dnklhtbgn
-// @downloadURL https://github.com/dnklhtbgn/js-user-scripts/raw/master/scripts/amo/chats_wallpaper.user.js
-// @updateURL   https://github.com/dnklhtbgn/js-user-scripts/raw/master/scripts/amo/chats_wallpaper.user.js
+// @downloadURL https://github.com/dnklhtbgn/user-js-and-css/raw/master/scripts/amo/chats_wallpaper.user.js
+// @updateURL   https://github.com/dnklhtbgn/user-js-and-css/raw/master/scripts/amo/chats_wallpaper.user.js
 // @match       *://web.amo.tm/*
 // @grant       GM_setValue
 // @grant       GM_getValue
