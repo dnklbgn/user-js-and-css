@@ -3,7 +3,8 @@
 
 ## Список существующих на данный момент скриптов
 - [Мессенджер amo](https://amo.tm/)
-  - [:sunrise:Обои для чатов](https://github.com/dnklhtbgn/js-user-scripts/blob/master/amo/chats_wallpaper.user.js)
+  - [:sunrise:Обои для чатов](https://github.com/dnklhtbgn/js-user-scripts/blob/master/scripts/amo/chats_wallpaper.user.js)
+  - [:new_moon_with_face:Темная тема](https://github.com/dnklhtbgn/js-user-scripts/blob/master/scripts/amo/dark_mode.user.js)
 
 ## Использование скриптов
 1. Устанавливаем в браузер расширение [Tampermonkey](https://www.tampermonkey.net/);
