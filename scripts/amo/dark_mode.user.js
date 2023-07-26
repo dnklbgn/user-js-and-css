@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        amo messenger dark mode
 // @namespace   https://github.com/dnklhtbgn/js-user-scripts
-// @version     0.4
+// @version     0.4.1
 // @description Добавляем темную тему в мессенджер amo
 // @author      dnklhtbgn
 // @downloadURL https://github.com/dnklhtbgn/user-js-and-css/raw/master/scripts/amo/dark_mode.user.js
@@ -33,7 +33,7 @@ function GM_addStyle(css) {
   GM_addStyle('body, [class^="ForwardModal_divider__"] { background-color: #284860; }');
   GM_addStyle('#app > div:first-child { background-color: #07131d; }');
   GM_addStyle(
-    '[class^="Sidebar_container"], [class^="ConversationHeader_header"], [class^="Tab_tab_content_wrapper"], [class^="style_search_container"] label:first-child, [class^="RegularMessage_message__"], [class^="MainInput_container__"], [class^="ForwardModal_header__"], [class^="ForwardModal_controls__"], [class^="style_checkmark_border__"] {' +
+    '[class^="Sidebar_container"], [class^="ConversationHeader_header"], [class^="Tab_tab_content_wrapper"], [class^="style_search_container"] label:first-child, [class^="RegularMessage_message__"], [class^="MainInput_container__"], [class^="ForwardModal_header__"], [class^="ForwardModal_controls__"], [class^="style_checkmark_border__"], [class^="MainInput_container__"] ._scrollbar.baron__clipper, [class^="ConversationRoute_compose__"] {' +
     'background: #153043;' +
     '}'
   );
@@ -43,9 +43,9 @@ function GM_addStyle(css) {
     '}'
   );
   GM_addStyle('[class^="style_modal_drawer"] { background: #102535; }');
-  GM_addStyle('#app > div:nth-child(3) ._scrollbar.baron__clipper { background: #0f2231; }');
+  GM_addStyle('[data-baron-v-id="2"] { background: #0f2231; }');
   GM_addStyle(
-    '#app > div:nth-child(3) ._scrollbar.baron__clipper:before {' +
+    '[data-baron-v-id="2"]:before {' +
     'content: \'\';' +
     'display: block;' +
     'position: absolute;' +
@@ -59,7 +59,7 @@ function GM_addStyle(css) {
   );
   GM_addStyle('[class*="RegularMessage_is_outgoing__"] [class^="RegularMessage_message__"] { background: #264b79; }');
   GM_addStyle(
-    '[class^="RegularMessage_message__"], [class^="ForwardMessage_container__"], [class^="ReferenceMessage_container__"], [class^="FeedTextarea_editable__"], [class*="style_search_input__"], [class*="style_subtitle_light__"], [class^="SearchMessages_title__"], [class^="Notification_title__"] {' +
+    '[class^="RegularMessage_message__"], [class^="ForwardMessage_container__"], [class^="ReferenceMessage_container__"], [class^="FeedTextarea_editable__"], [class*="style_search_input__"], [class*="style_subtitle_light__"], [class^="SearchMessages_title__"], [class^="Notification_title__"], [class^="UserMentionItem_container__"] {' +
     'color: #f2f2f2;' +
     '}'
   );
@@ -87,7 +87,7 @@ function GM_addStyle(css) {
     '}'
   );
   GM_addStyle(
-    '[class^="Sidebar_container"] [class^="style_clickable__"]:hover, [class^="MessagePhotoMedia_photo_media_container__"] {' +
+    '[class^="Sidebar_container"] [class^="style_clickable__"]:hover, [class^="MessagePhotoMedia_photo_media_container__"], [class*="UserMentionItem_container_selected__"] {' +
     'background: #284860 !important;' +
     '}'
   );
@@ -101,7 +101,7 @@ function GM_addStyle(css) {
     'background-color: rgba(84, 160, 215, .1);' +
     '}'
   );
-  GM_addStyle('[class^="Sidebar_scroller_wrapper__"], [class*="TabCaption_caption__"] {' +
+  GM_addStyle('[class^="Sidebar_scroller_wrapper__"], [class*="TabCaption_caption__"], [class^="MainInput_container__"] ._scrollbar.baron__clipper {' +
     'border-color: #284860 !important;' +
     '}'
   );
