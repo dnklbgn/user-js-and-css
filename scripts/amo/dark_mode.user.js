@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        amo messenger dark mode
 // @namespace   https://github.com/dnklhtbgn/js-user-scripts
-// @version     0.4.1
+// @version     0.4.2
 // @description Добавляем темную тему в мессенджер amo
 // @author      dnklhtbgn
 // @downloadURL https://github.com/dnklhtbgn/user-js-and-css/raw/master/scripts/amo/dark_mode.user.js
@@ -43,9 +43,9 @@ function GM_addStyle(css) {
     '}'
   );
   GM_addStyle('[class^="style_modal_drawer"] { background: #102535; }');
-  GM_addStyle('[data-baron-v-id="2"] { background: #0f2231; }');
+  GM_addStyle('[class^="ConversationRoute_container__"] > div:nth-child(3) { background: #0f2231; }');
   GM_addStyle(
-    '[data-baron-v-id="2"]:before {' +
+    '[class^="ConversationRoute_container__"] > div:nth-child(3):before {' +
     'content: \'\';' +
     'display: block;' +
     'position: absolute;' +
@@ -59,7 +59,7 @@ function GM_addStyle(css) {
   );
   GM_addStyle('[class*="RegularMessage_is_outgoing__"] [class^="RegularMessage_message__"] { background: #264b79; }');
   GM_addStyle(
-    '[class^="RegularMessage_message__"], [class^="ForwardMessage_container__"], [class^="ReferenceMessage_container__"], [class^="FeedTextarea_editable__"], [class*="style_search_input__"], [class*="style_subtitle_light__"], [class^="SearchMessages_title__"], [class^="Notification_title__"], [class^="UserMentionItem_container__"] {' +
+    '[class^="RegularMessage_message__"], [class^="ForwardMessage_container__"], [class^="ReferenceMessage_container__"], [class^="FeedTextarea_editable__"], [class*="style_search_input__"], [class*="style_subtitle_light__"], [class^="SearchMessages_title__"], [class^="Notification_title__"], [class^="UserMentionItem_container__"], [class^="TabCaption_name__"], [class^="FolderView_container__"] [class^="style_header__"] {' +
     'color: #f2f2f2;' +
     '}'
   );
@@ -82,12 +82,13 @@ function GM_addStyle(css) {
     '}'
   );
   GM_addStyle(
-    '[class^="TabCaption_name__"], [class*="MessageTitle_user__"], [class^="ServiceMessage_container__"] [class^="UserLink_user_link__"], [class^="ServiceMessage_container__"], [class^="ForwardModal_header__"] {' +
+    '[class*="MessageTitle_user__"], [class^="ServiceMessage_container__"] [class^="UserLink_user_link__"], [class^="ServiceMessage_container__"], [class^="ForwardModal_header__"], [class^="BaseEditableAddAction_placeholder__"], [class*="BaseEditableAddAction_container_dark__"] {' +
     'color: #8092ad;' +
     '}'
   );
+  GM_addStyle('[class^="BaseEditableAddAction_avatar_component_base__"] { fill: #8092ad; }')
   GM_addStyle(
-    '[class^="Sidebar_container"] [class^="style_clickable__"]:hover, [class^="MessagePhotoMedia_photo_media_container__"], [class*="UserMentionItem_container_selected__"] {' +
+    '[class^="Sidebar_container"] [class^="style_clickable__"]:hover, [class^="Sidebar_container"] span[role="link"]:hover, [class^="MessagePhotoMedia_photo_media_container__"], [class*="UserMentionItem_container_selected__"] {' +
     'background: #284860 !important;' +
     '}'
   );
@@ -107,8 +108,8 @@ function GM_addStyle(css) {
   );
   GM_addStyle('[class^="style_tab__"] { border-right: 1px solid #284860 }');
   GM_addStyle('[class^="style_tabs__"]:after { background: #284860 }');
-  GM_addStyle('[class^="MessageItem_unread_messages_separator__"] {' +
-    'background: rgba(40, 72, 96, .65);' +
+  GM_addStyle('[class^="MessageItem_unread_messages_separator__"], [class*="style_date_separator_item__"] span {' +
+    'background: rgba(40, 72, 96);' +
     'color: #8092ad;' +
     '}'
   );
